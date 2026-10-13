@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aditya Ahir - Portfolio | B.Tech ECE (Semiconductor & Chip Design) at JECRC University, Jaipur. Exploring VLSI, Embedded Systems, Computer Architecture & Gen AI.">
+  <meta name="keywords" content="Aditya Ahir, Portfolio, Semiconductor, Chip Design, VLSI, ECE, JECRC University, Jaipur, Embedded Systems, ECE-FIRST-YEAR">
+  <meta name="author" content="Aditya Ahir">
+  <title>Aditya Ahir | Semiconductor & Chip Design Portfolio</title>
+  
+  <!-- Main Stylesheet (Relative Path) -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon (Inline SVG for instant offline & local rendering) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230f172a'/><path d='M30 70 L50 25 L70 70 M38 54 L62 54' stroke='%2338bdf8' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+  <!-- Background Ambient Glow & Grid -->
+  <div class="circuit-bg" aria-hidden="true"></div>
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Aditya Ahir Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+          </svg>
+        </span>
+        <span class="logo-text">Aditya<span class="highlight">.dev</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">GitHub Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons: GitHub Link, Theme Toggle & Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- Direct GitHub Link Button -->
+        <a href="https://github.com/adityaahir3/ECE-FIRST-YEAR" target="_blank" rel="noopener noreferrer" class="icon-btn github-nav-btn" aria-label="GitHub Repository" title="GitHub: adityaahir3/ECE-FIRST-YEAR">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="themeToggle" class="icon-btn theme-btn" aria-label="Toggle light/dark theme" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary nav-contact-btn">Get In Touch</a>
+
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill hero-badge">
+            <span class="status-dot"></span>
+            <span>B.Tech ECE (1st Year) • Semiconductor & Chip Design</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Aditya Ahir</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            Passionate About <span class="typing-text" id="typingText"></span><span class="cursor">&nbsp;</span>
+          </h2>
+
+          <p class="hero-description">
+            Undergraduate student at <strong>JECRC University, Jaipur</strong> specializing in 
+            Semiconductor & Chip Design. Dedicated to exploring <strong>VLSI, Embedded Systems, Computer Architecture</strong>, 
+            and leveraging <strong>Gen AI</strong> to solve real-world hardware & engineering challenges.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://github.com/adityaahir3/ECE-FIRST-YEAR" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub: ECE-FIRST-YEAR</span>
+            </a>
+            <a href="#projects" class="btn btn-primary">
+              <span>View Repository</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Social & Info Badges -->
+          <div class="hero-social-strip">
+            <div class="location-tag">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Jaipur, Rajasthan, India</span>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/adityaahir3" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile: adityaahir3" title="GitHub: adityaahir3">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="mailto:Adityayadav823862@gmail.com" class="social-icon" aria-label="Email Aditya" title="Email: Adityayadav823862@gmail.com">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO VISUAL: Real Profile Photo with Semiconductor Tech Motif -->
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-image-container">
+              <img src="profile.jpg" alt="Aditya Ahir - Profile" class="hero-profile-img">
+              <div class="profile-glow-ring"></div>
+              <div class="profile-chip-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+                </svg>
+                <span>VLSI &bull; CHIP</span>
+              </div>
+              <div class="status-badge-floating">
+                <span class="status-dot"></span>
+                <span>Open to Projects</span>
+              </div>
+            </div>
+
+            <div class="profile-card-footer">
+              <div class="profile-meta">
+                <span class="profile-name">Aditya Ahir</span>
+                <span class="profile-sub">B.Tech ECE (Semiconductor)</span>
+              </div>
+              <a href="https://github.com/adityaahir3" target="_blank" rel="noopener noreferrer" class="profile-github-link" title="Visit GitHub Profile">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>@adityaahir3</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Get To Know Me</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="about-avatar-box">
+              <div class="avatar-photo-frame">
+                <img src="profile.jpg" alt="Aditya Ahir" class="about-avatar-img">
+              </div>
+              <div class="avatar-info">
+                <h3>Aditya Ahir</h3>
+                <p class="role-text">B.Tech ECE (Semiconductor & Chip Design)</p>
+                <p class="univ-text">JECRC University, Jaipur</p>
+                <a href="https://github.com/adityaahir3" target="_blank" rel="noopener noreferrer" class="about-github-badge">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>github.com/adityaahir3</span>
+                </a>
+              </div>
+            </div>
+
+            <p class="about-paragraph">
+              Hello! I am a passionate first-year <strong>B.Tech Electronics & Communication Engineering</strong> 
+              student specializing in <strong>Semiconductor and Chip Design</strong> at JECRC University, Jaipur.
+            </p>
+            <p class="about-paragraph">
+              My core interests lie at the heart of modern computation: <strong>VLSI design, embedded systems, 
+              and computer architecture</strong>. I am fascinated by the physics and engineering behind how billions 
+              of microscopic transistors come together on a sliver of silicon to power our world.
+            </p>
+            <p class="about-paragraph">
+              Beyond theory, I enjoy solving practical, real-world problems. I combine hands-on circuit exploration 
+              with modern tools like <strong>Generative AI</strong> to accelerate learning, research complex datasheets, 
+              and architect forward-looking solutions.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="hl-icon">⚡</div>
+                <div>
+                  <strong>Hardware Fascination:</strong>
+                  <span>Dedicated to understanding chip fabrication, digital logic, and microarchitecture.</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="hl-icon">🚀</div>
+                <div>
+                  <strong>Proactive Problem Solver:</strong>
+                  <span>Driven by curious inquiry, eager to tackle engineering projects and team challenges.</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="hl-icon">🤝</div>
+                <div>
+                  <strong>Leadership & Storytelling:</strong>
+                  <span>Bridging deep technical concepts with clear communication and empathetic team leadership.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Information Cards -->
+          <div class="about-cards-column">
+            <div class="info-card glass-panel">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Current Status</h4>
+                <p>1st Year Undergraduate</p>
+                <span class="subtext">B.Tech in ECE with Specialized Focus</span>
+              </div>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Core Interests</h4>
+                <p>VLSI & Chip Manufacturing</p>
+                <span class="subtext">Embedded Systems & Computer Architecture</span>
+              </div>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>GitHub Hub</h4>
+                <p>adityaahir3</p>
+                <a href="https://github.com/adityaahir3/ECE-FIRST-YEAR" target="_blank" rel="noopener noreferrer" class="text-action-btn">
+                  View ECE-FIRST-YEAR Repo &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Direct Email</h4>
+                <p class="email-truncate">Adityayadav823862@gmail.com</p>
+                <button class="text-action-btn" id="copyEmailQuickBtn" title="Copy email address">
+                  Copy Email
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Academic Journey</span>
+          <h2 class="section-title">Education & Focus</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-badge">2024 &ndash; 2028 (Expected) &bull; Currently in 1st Year</div>
+              <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+              <h4 class="timeline-subtitle">Electronics and Communication Engineering (ECE)</h4>
+              <p class="timeline-institution">
+                <strong>Specialization:</strong> Semiconductor & Chip Design <br>
+                <strong>University:</strong> JECRC University, Jaipur, Rajasthan
+              </p>
+              
+              <div class="curriculum-box">
+                <h5>Key Academic Focus & Relevant Learning:</h5>
+                <ul class="learning-list">
+                  <li><strong>Semiconductor Physics & Materials:</strong> Bandgap theory, PN junction dynamics, and MOS capacitor operation.</li>
+                  <li><strong>Digital Logic & Design:</strong> Boolean algebra, logic minimization, combinational & sequential circuit synthesis.</li>
+                  <li><strong>Introduction to VLSI Design:</strong> Fundamentals of IC design flows, CMOS inverter sizing, and layout concepts.</li>
+                  <li><strong>Computer Architecture Fundamentals:</strong> Instruction set concepts, CPU data paths, ALUs, memory hierarchy, and register structures.</li>
+                  <li><strong>Embedded Systems Basics:</strong> Microcontroller architectures, basic peripherals (GPIO, timers, ADC), and interface protocols.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="tag">VLSI Design</span>
+                <span class="tag">Digital Electronics</span>
+                <span class="tag">Microcontrollers</span>
+                <span class="tag">Computer Architecture</span>
+                <span class="tag">Semiconductor Fabrication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Timeline Item -->
+          <div class="timeline-item">
+            <div class="timeline-dot secondary">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <circle cx="12" cy="12" r="8"/>
+              </svg>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-badge">Foundational Milestones</div>
+              <h3 class="timeline-title">Senior Secondary Education (PCM)</h3>
+              <p class="timeline-institution">Physics, Chemistry, and Mathematics focus that sparked a passion for electronics, solid-state physics, and computational thinking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">What I Bring To The Table</span>
+          <h2 class="section-title">Skills & Competencies</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1: Hardware & Semiconductor -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-category-header">
+              <div class="cat-icon hardware">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+                </svg>
+              </div>
+              <div>
+                <h3>Hardware & Semiconductor</h3>
+                <p class="cat-desc">Silicon engineering and electronic system foundations</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-pill">
+                <span class="skill-name">VLSI Design Fundamentals</span>
+                <span class="skill-level">Active Learning</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Semiconductor & Chip Design</span>
+                <span class="skill-level">Specialization Focus</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Digital Logic Design</span>
+                <span class="skill-level">Combinational & Sequential</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Computer Architecture</span>
+                <span class="skill-level">Core Concept</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Embedded Systems</span>
+                <span class="skill-level">Microcontrollers & Peripherals</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Circuit Analysis & Simulation</span>
+                <span class="skill-level">SPICE / Digital Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2: Software & Modern AI -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-category-header">
+              <div class="cat-icon ai">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z"/>
+                  <path d="M16 11v1a4 4 0 0 1-8 0v-1"/>
+                  <path d="M12 16v6M8 22h8"/>
+                </svg>
+              </div>
+              <div>
+                <h3>Programming & Gen AI</h3>
+                <p class="cat-desc">Computational tools and modern automation</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-pill">
+                <span class="skill-name">Generative AI Tools</span>
+                <span class="skill-level">Prompting & Workflow Boost</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">C / C++ Programming</span>
+                <span class="skill-level">Hardware/Firmware Logic</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Verilog / HDL</span>
+                <span class="skill-level">Introductory Exploration</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Problem Solving with Code</span>
+                <span class="skill-level">Algorithm Building</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Web Technologies</span>
+                <span class="skill-level">HTML5 &bull; CSS3 &bull; JavaScript</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Git & Version Control</span>
+                <span class="skill-level">Code Collaboration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3: Professional & Leadership Skills -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-category-header">
+              <div class="cat-icon leadership">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <h3>Leadership & Soft Skills</h3>
+                <p class="cat-desc">Key personal attributes and interpersonal strengths</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-pill">
+                <span class="skill-name">Communication</span>
+                <span class="skill-level">Clear & Articulate</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Storytelling</span>
+                <span class="skill-level">Engaging Presentation</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Willingness to Learn</span>
+                <span class="skill-level">Growth Mindset</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Leadership</span>
+                <span class="skill-level">Team Coordination</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Real-World Problem Solving</span>
+                <span class="skill-level">Analytical Approach</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">Adaptability</span>
+                <span class="skill-level">Fast Learner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & GITHUB SHOWCASE SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">GitHub Showcase</span>
+          <h2 class="section-title">Featured Repository & Projects</h2>
+          <div class="heading-line"></div>
+          <p class="section-subtitle">
+            Central repository tracking my First-Year B.Tech coursework, hardware experiments, 
+            circuit simulations, and semiconductor problem-solving code.
+          </p>
+        </div>
+
+        <!-- Main Featured GitHub Repository Card -->
+        <div class="github-featured-container">
+          <article class="github-repo-card glass-panel">
+            <div class="repo-card-top">
+              <div class="repo-identity">
+                <div class="repo-octo-icon">
+                  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="repo-owner-line">
+                    <span class="repo-owner">adityaahir3</span>
+                    <span class="repo-slash">/</span>
+                    <a href="https://github.com/adityaahir3/ECE-FIRST-YEAR" target="_blank" rel="noopener noreferrer" class="repo-name-link">
+                      ECE-FIRST-YEAR
+                    </a>
+                  </div>
+                  <span class="repo-pill-badge">Public Repository &bull; Specialization: Semiconductor & Chip Design</span>
+                </div>
+              </div>
+
+              <div class="repo-stats-pill">
+                <span class="badge-tag">JECRC University</span>
+                <span class="badge-tag">B.Tech ECE</span>
+              </div>
+            </div>
+
+            <p class="repo-main-desc">
+              The flagship GitHub repository for my 1st Year B.Tech in Electronics & Communication Engineering 
+              at <strong>JECRC University, Jaipur</strong>. Contains laboratory practicals, digital logic circuits, 
+              semiconductor physics observations, structured C programming algorithms, and foundational hardware design notes.
+            </p>
+
+            <!-- Repository Modules Grid -->
+            <div class="repo-modules-grid">
+              <div class="module-item">
+                <div class="module-icon">🔬</div>
+                <div>
+                  <h4>Semiconductor & Solid-State Physics</h4>
+                  <p>Bandgap theory, charge carrier transport, PN junction dynamics, and diode VI characteristics.</p>
+                </div>
+              </div>
+
+              <div class="module-item">
+                <div class="module-icon">⚡</div>
+                <div>
+                  <h4>Digital Logic & Circuit Design</h4>
+                  <p>Boolean simplification, Karnaugh maps, combinational logic gates, and adder/subtractor circuits.</p>
+                </div>
+              </div>
+
+              <div class="module-item">
+                <div class="module-icon">💻</div>
+                <div>
+                  <h4>C Programming & Problem Solving</h4>
+                  <p>Algorithmic implementations, memory management, pointers, and engineering problem sets.</p>
+                </div>
+              </div>
+
+              <div class="module-item">
+                <div class="module-icon">🛠️</div>
+                <div>
+                  <h4>Hardware Lab & Observations</h4>
+                  <p>Hands-on breadboard wiring, multimeter measurements, oscilloscope waveforms, and lab records.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Git Clone Box -->
+            <div class="git-clone-box">
+              <div class="clone-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"/>
+                  <line x1="12" y1="19" x2="20" y2="19"/>
+                </svg>
+                <span>Clone Repository:</span>
+              </div>
+              <code class="clone-cmd" id="cloneCmdText">git clone https://github.com/adityaahir3/ECE-FIRST-YEAR.git</code>
+              <button type="button" class="btn btn-sm btn-outline copy-clone-btn" id="copyCloneBtn" title="Copy git clone command">
+                <span id="cloneBtnText">Copy</span>
+              </button>
+            </div>
+
+            <!-- Repo Action Buttons -->
+            <div class="repo-actions-strip">
+              <a href="https://github.com/adityaahir3/ECE-FIRST-YEAR" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Open Repository on GitHub</span>
+              </a>
+
+              <a href="https://github.com/adityaahir3" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                <span>View Aditya's GitHub Profile</span>
+              </a>
+
+              <a href="#contact" class="btn btn-outline">
+                <span>Discuss Collaboration</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Milestones & Recognition</span>
+          <h2 class="section-title">Achievements</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card glass-panel">
+            <div class="achieve-badge">🏆 Academic Drive</div>
+            <h3>Specialized Admission & Focus</h3>
+            <p>
+              Secured admission into the specialized <strong>Semiconductor & Chip Design</strong> curriculum at JECRC University, 
+              focusing on the future of India's semiconductor mission.
+            </p>
+          </div>
+
+          <div class="achievement-card glass-panel">
+            <div class="achieve-badge">💡 Innovation & Projects</div>
+            <h3>Real-World Problem Solving</h3>
+            <p>
+              Actively designing hands-on hardware simulations, laboratory experiments, and integrating 
+              Generative AI to speed up semiconductor component evaluations.
+            </p>
+          </div>
+
+          <div class="achievement-card glass-panel">
+            <div class="achieve-badge">🗣️ Leadership & Communication</div>
+            <h3>Storytelling & Team Leadership</h3>
+            <p>
+              Demonstrated strong communication and leadership abilities in group academic activities, technical presentations, 
+              and cross-functional student engineering discussions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Reach Out</span>
+          <h2 class="section-title">Contact Me</h2>
+          <div class="heading-line"></div>
+          <p class="section-subtitle">Interested in collaborating on chip design, embedded projects, or discussing new opportunities? Let's connect!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Information Side -->
+          <div class="contact-info-panel glass-panel">
+            <h3>Let's talk about hardware, chip design, or tech!</h3>
+            <p class="contact-info-desc">
+              Whether you have an internship opportunity, an academic project idea, or want to explore my GitHub repository, my inbox is always open.
+            </p>
+
+            <div class="contact-details-list">
+              <!-- Email Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact-text-box">
+                  <span class="label">Primary Email</span>
+                  <a href="mailto:Adityayadav823862@gmail.com" class="value link" id="displayEmail">Adityayadav823862@gmail.com</a>
+                  <button type="button" class="btn btn-sm btn-outline copy-btn" id="copyEmailBtn">
+                    <span id="copyBtnText">Copy Email Address</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- GitHub Profile Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="contact-text-box">
+                  <span class="label">GitHub Account</span>
+                  <a href="https://github.com/adityaahir3" target="_blank" rel="noopener noreferrer" class="value link">github.com/adityaahir3</a>
+                  <span class="subtext">Repository: ECE-FIRST-YEAR</span>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-text-box">
+                  <span class="label">Location</span>
+                  <span class="value">Jaipur, Rajasthan, India</span>
+                  <span class="subtext">JECRC University Campus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-panel glass-panel">
+            <h3 class="form-title">Send a Direct Message</h3>
+            
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="senderName">Your Name <span class="required">*</span></label>
+                <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Professor Sharma / John Doe" required>
+                <span class="error-msg" id="nameError">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Your Email Address <span class="required">*</span></label>
+                <input type="email" id="senderEmail" name="email" class="form-input" placeholder="e.g. name@example.com" required>
+                <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="messageSubject">Subject <span class="required">*</span></label>
+                <input type="text" id="messageSubject" name="subject" class="form-input" placeholder="e.g. ECE Collaboration / Hardware Discussion" required>
+                <span class="error-msg" id="subjectError">Please provide a subject.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Your Message <span class="required">*</span></label>
+                <textarea id="senderMessage" name="message" class="form-textarea" rows="5" placeholder="Write your message here..." required></textarea>
+                <span class="error-msg" id="messageError">Please enter your message (at least 10 characters).</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+
+              <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+            </svg>
+          </span>
+          <span class="logo-text">Aditya Ahir</span>
+        </a>
+        <p class="footer-tagline">
+          B.Tech ECE (Semiconductor & Chip Design) &bull; JECRC University, Jaipur
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">GitHub Projects</a>
+        <a href="https://github.com/adityaahir3/ECE-FIRST-YEAR" target="_blank" rel="noopener noreferrer">ECE-FIRST-YEAR Repo</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Aditya Ahir. All Rights Reserved.</p>
+        <p class="footer-crafted">Crafted with modern HTML5, CSS3 & JavaScript &bull; Ready for Vercel Deployment</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Scroll back to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File (Relative Path) -->
+  <script src="script.js"></script>
+</body>
+</html>
